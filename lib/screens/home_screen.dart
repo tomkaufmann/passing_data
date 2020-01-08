@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'second_screen.dart';
 
 class HomeScreen extends StatefulWidget {
-  HomeScreen({Key key, this.title}) : super(key: key);
   final String title;
+  HomeScreen({this.title});
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
