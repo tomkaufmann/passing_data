@@ -28,7 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               FlatButton(
                 onPressed: () async {
-                  textFromSecondScreen = await Navigator.push(
+                  String text = await Navigator.push(
                     context,
                     MaterialPageRoute(
                       builder: (context) {
@@ -37,6 +37,9 @@ class _HomeScreenState extends State<HomeScreen> {
                       },
                     ),
                   );
+                  setState(() {
+                    textFromSecondScreen = text;
+                  });
                 },
                 color: Colors.grey,
                 child: Text(
